@@ -1,41 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Grab modal elements
-    const viewer = document.getElementById('imageViewer');
-    const viewerImage = document.getElementById('viewerImage');
-    const closeButton = document.querySelector('.close-viewer');
-    const galleryImages = document.querySelectorAll('.gallery-image');
-    
-    // Add click event to each gallery image
-    galleryImages.forEach(image => {
-        image.addEventListener('click', function () {
-            viewer.style.display = 'flex'; // Show the modal
-            viewerImage.src = this.src; // Set the clicked image source to the viewer
-        });
+const menuButton = document.querySelector(".menu-button");
+const gallery = document.querySelector(".gallery");
 
-    });
+function toggleMenu() {
+    const menu = document.querySelector("#menuItems");
+    menu.classList.toggle("hide");
 
-    
-    
-    // Close modal when the close button is clicked
-    closeButton.addEventListener('click', function () {
-        viewer.style.display = 'none'; // Hide the modal
-    });
+}
+function handleResize () {
+    const menu = document.querySelector("#menuItems");
+    if (window.innerWidth > 1000) {
+        menu.classList.remove("hide");
+    } else {
+        menu.classList.add("hide");
+    }
+}
 
-    // Optionally, close modal when clicking outside the image
-    viewer.addEventListener('click', function (e) {
-        if (e.target === viewer) {
-            viewer.style.display = 'none'; // Hide the modal
-        }
-    });
+handleResize();
 
-    // 2. Menu toggle functionality
-    const menuButton = document.getElementById('menuButton');
-    const menuItems = document.getElementById('menuItems');
+function viewerTemplate(pic, alt) {
+    return `<div class="viewer">
+        <span class="close-viewer">X</span>
+        <img src="${pic}" alt="${alt}">
+        </div>`;
+}
 
-    menuButton.addEventListener('click', function () {
-        // Toggle the "hide" class to show/hide the menu items
-        menuItems.classList.toggle('hide');
-    });
+function closeViewer() {
+    document.querySelector(".viewer")?.remove();
+}
 
-});
+function viewHandler(event) {
+    const target = event.target;
+    console.dir(target);
+    const imgSrc = event.target.src.split("-");
+    const newSrc = imgSrc[0] + "-full.jpeg";
+    document.body.insertAdjacentHTML(
+        "afterbegin",
+        viewerTemplate(newSrc, target.alt)
+    );
 
+    document
+        .querySelector(".close-viewer")
+        .addEventListener("click", closeViewer)
+
+}
+
+
+menuButton.addEventListener("click", toggleMenu);
+gallery.addEventListener("click", viewHandler);
+window.addEventListener("resize", handleResize);

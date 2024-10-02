@@ -46,7 +46,6 @@ header {
   padding: 1em 0;
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 h1 {
@@ -55,19 +54,59 @@ h1 {
   margin: 0;
 }
 
-.menu-button {
+#menu-button {
   background-color: transparent;
   border: none;
   color: var(--text-light);
   font-family: var(--secondary-font);
   font-size: 1.5em;
   cursor: pointer;
+  border: none;
   padding: 0.5em 1em;
   margin-top: 0.5em;
-  display: block;
+}
+
+
+
+#menuItems {
+  list-style: none;
+  padding: 0;
+}
+
+#menuItems li {
+  margin: 10px 0;
+}
+
+#menuItems li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 1.2em;
+}
+
+#menuItems li a:hover {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  text-decoration: underline;
 }
 
 .viewer {
+  position: fixed;
+  padding-top: 100px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  color: var(--text-light);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+#imageViewer {
   display: none;
   position: fixed;
   top: 0;
@@ -83,23 +122,19 @@ h1 {
   grid-template-rows: auto 1fr;
 }
 
-.viewer img {
-  max-height: 100%;
-  max-width: 100%;
+#viewerImage {
+  max-height: 90%;
+  max-width: 90%;
 }
 
 .close-viewer {
-  color: white;
-  background: transparent;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 20px;
+position: absolute;
+top: 50px;
+right: 10px;
+color: white;
+font-size: 24px;
+cursor: pointer;
 }
-
-
 
 
 a:link,
@@ -109,10 +144,7 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  background-color: var(--accent-color);
-  text-decoration: underline;
-}
+
 
 
 h2 {
@@ -155,9 +187,7 @@ footer {
     display: flex; /* Show nav links on larger screens */
   }
 
-  .menu-button {
-    display: none; /* Hide menu button on larger screens */
-  }
+
 }
 
 @media screen and (min-width: 768px) {
