@@ -2,7 +2,7 @@ const menuButton = document.querySelector(".menu-button");
 const gallery = document.querySelector(".gallery");
 
 function toggleMenu() {
-    const menu = document.querySelector("#menuItems");
+    const menu = document.querySelector("#menu");
     menu.classList.toggle("hide");
 
 }

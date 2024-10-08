@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --primary-color: #0a2463;
+    --secondary-color: #3e92cc; 
+    --accent-color: #c20114;
+    --text-dark: #7e6c6c;
+    --text-light: #e4fde1;
+    --primary-font:'Roboto Condensed', Helvetica, sans-serif;
+    --secondary-font:'Lato', sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    border-top: 5px solid var(--secondary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    padding: 30px;
+    margin: 0 auto;
+
+
+}
+h1 {
+    color: var(--text-dark);
+    font-family: var(--primary-font);
+    font-size: 3.0em;
+    text-align: center;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: 2.0em;
+}
+
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    list-style-type: none;
+    padding-left: 0;
+
+}
+
+.skipcontent a {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    top: -40px;
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    color: var(--accent-color);
+    font-size: 1.3em;
+    padding: 0 10px;
+}
+
+.skipcontent a:focus {
+    top: 0;
+    
+}
+
+
+nav a {
+    color: var(--accent-color);
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    grid-column: 3/3;
+    font-size: 1.3em;
+    padding: 0 10px;
+
+}
+
+p {
+    color: var(--text-dark);
+    font-family: var(--secondary-font);
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    text-decoration: underline;
+    padding: 10px;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    margin: 2em;
+}
+
+.article .info {
+    grid-column: 1/2;
+    text-align: center;
+    border-right: 1px solid var(--secondary-color);
+}
+
+.article .book {
+    text-align: center;
+}
+
+.filter {
+    grid-column: 2/2;
+    grid-row: 1/3;
+    border: 1px solid var(--secondary-color)
+}
+body {
+    margin: 15px;
+    padding: 15px;
+
+}
