@@ -9,7 +9,16 @@ function validateForm(event) {
     // start by assuming the form is valid.
     let isValid = true;
     // add our validations here
-  
+    if (theForm.paymentMethod.value === "creditCard") {
+      if(theForm.creditCardNumber.value !== "1234123412341234") {
+        isValid = false;
+        errors.push("Invalid Credit Card Number");
+      }
+    }
+    if (theForm.fullName.value !== "Bob") {
+      isValid = false;
+      errors.push("Your name is not Bob");
+    }
     // if we ran into any problems above valid will be false.
     if (!isValid) {
       //stop the form from being submitted
@@ -21,20 +30,39 @@ function validateForm(event) {
     }
   }
   
+  function qs(selector) {
+    return document.querySelector(selector);
+  }
+
+  function gebi(id) {
+    return document.getElementById(id);
+  }
+
   function togglePaymentDetails(e) {
     // get a reference to the form. We can access all the named form inputs through the form element.
-    const theForm = ;
+    const theForm = qs("#checkoutForm");
     // we will also need the creditCardContainer and paypalUsernameContainer
-    const creditCardContainer = ;
-    const paypalContainer = ;
+    const creditCardNumberContainer = gebi("#card-number");
+    const paypalContainer = gebi("#paypal-user");
   
     // Hide payment containers by adding the '.hide' class to each of them
-  
+      creditCardNumberContainer.classList.add("hide");
+      paypalContainer.classList.add("hide");
+
     // Disable required for payment fields...if we hide a required field the browser will throw an error when we try to submit!
-  
+      theForm.creditCardNumber.required = false;
+      theForm.paypalUsername.required = false;
   
     // Show the container based on the selected payment method, and add the required attribute back.
-  
+      if (theForm.paymentType.value == "creditCard") {
+        creditCardNumberContainer.classLis.remove("hide");
+        theForm.cardNumber.required = true;
+    } else if (theForm.paymentType.value == "paypal") {
+        paypalContainer.classList.remove("hide");
+        theForm.paypalUsername.required = true;
+      
+        }
+      
   }
   
   // helper function to display our errors.
@@ -44,5 +72,7 @@ function validateForm(event) {
     errorEl.innerHTML = html.join("");
   }
   // attach a change event handler to the paymentMethod input
-  
+  qs("#payment-type").addEventListener("change", togglePaymentDetails);
+
   // attach a submit event handler to the form
+  qs("#checkoutForm").addEventListener("submit", validateForm)

@@ -1,0 +1,25 @@
+img {
+    width: 200px;
+    margin-left: 90px;
+}
+
+#article-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em;
+    justify-content: space-between;
+    max-width: 1600px;
+
+}   
+
+
+h2 {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    text-align: center;
+}
+h3 {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}

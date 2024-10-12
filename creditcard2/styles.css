@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+#card-front, #card-back {
+    background-color: lightgray;
+    width: 390px;
+    height: 250px;
+    border-radius: 6px;
+    padding: 20px 30px 20px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: lato, 'helvetica-light';
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr 1fr;
+    gap: 20px;
+    width: 600px;
+    margin: 0 auto;
+    
+}
+
+#card-front {
+    z-index: 1;
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    box-sizing: border-box;
+    font-size: 11px;
+    box-shadow: 10px 10px 15px black;
+
+}
+
+.card-image {
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+#card-front p {
+    grid-column: 1/2;
+}
+
+#cardnumber-container {
+    grid-column: 1/3;
+}
+
+#cardnumber-container input {
+    width: 90zz;
+}
+#card-front #cardholder-container {
+    grid-column: 1/2;
+
+}
+
+#cardholder-container input {
+    width: 85%;
+}
+
+
+#exp-container label {
+    display: block;
+}
+  
+#card-month, #card-year {
+    width: 40px;
+    display: inline;
+}
+
+#card-back {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    grid-template-rows: 1fr 1fr;
+    box-sizing: border-box;
+}
+
+#card-back #cvc-container {
+   text-align: center;
+    margin-right: 20px;
+    grid-column: 2/2;
+    grid-row: 2/2;
+}
+
+#cvc-container input {
+    width: 100%;
+}
+
+#submit {
+    grid-column: 3/4;
+    grid-row: 4/4; 
+    border: 1px solid black;
+    background-color: lightgray;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#back-stripe {
+    grid-column: 1/3;
+    width: 109%;
+    height: 55px;
+    background-color: black;
+    right: 0;
+}

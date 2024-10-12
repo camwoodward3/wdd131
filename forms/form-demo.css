@@ -33,8 +33,9 @@ select {
     display: none;
 }
 
+
 form {
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 1em;
     background-color: #f9f9f9;
@@ -51,20 +52,20 @@ label {
 
 input, textarea, select{
     width: 100%;
-    padding: 0.5em;
     margin-bottom: 1em;
+    padding: 0.5em;
     border: 1px solid #ccc;
     border-radius: 3px;
-    font-size: 1em;
+    font-size: 1.5rem;
 }
 
 button {
     display: block;
-    background-color: #218838;
+    background-color: #4caf50;
     color: white;
     margin-top: 0.5em;
-    padding: 0.5em 1em;
-    border: none;
+    padding: 1em 1em;
+    border: 0;
     border-radius: 10px;
     cursor: pointer;
 }
