@@ -1,6 +1,20 @@
 const articles = [
     {
         id: 1,
+        imgSrc: 'images/quigon.jpg',
+        imgAlt: 'Qui-Gon Jinn',
+        name: 'Qui-Gon Jinn',
+        birth: '80BBY, Coruscant',
+        death: '32BBY, Naboo',
+        species: 'Human',
+        master: 'Count Dooku',
+        padawan: 'Obi-Wan Kenobi',
+        rank: 'Jedi Master',
+        lightsaber: 'Green',
+        midochlorians: '17,500'
+    },
+    {
+        id: 2,
         imgSrc: 'images/obiwan.jpeg', 
         imgAlt: 'Obi-Wan Kenobi',
         name: 'Obi-Wan Kenobi',
@@ -16,7 +30,7 @@ const articles = [
         survivor: 'Order 66 Survivor'
     },
     {
-        id: 2,
+        id: 3,
         imgSrc: 'images/anakin.jpg',
         imgAlt: 'Anakin Skywalker',
         name: 'Anakin Skywalker',
@@ -36,7 +50,7 @@ const articles = [
         council: '19BBY, replaced Oppo Rancisis'
     },
     {
-        id: 3,
+        id: 4,
         imgSrc: 'images/yoda.jpeg',
         imgAlt: 'Yoda',
         name: 'Yoda',
@@ -52,7 +66,7 @@ const articles = [
 
     },
     {
-        id: 4,
+        id: 5,
         imgSrc: 'images/Mace_Windu.PNG',
         imgAlt: 'Mace_Windu',
         name: 'Mace Windu',
@@ -67,7 +81,7 @@ const articles = [
         council: '32-19BBY'
     },
     {
-        id: 5,
+        id: 6,
         imgSrc: 'images/Ki-Adi_Mundi.JPG',
         imgAlt: 'Ki-Adi Mundi',
         name: 'Ki-Adi Mundi',
@@ -81,7 +95,7 @@ const articles = [
         council: '33-19 BBY'
     },
     {
-        id: 6,
+        id: 7,
         imgSrc: 'images/Plo_Koon.PNG',
         imgAlt: 'Plo Koon',
         name: 'Plo Koon',
@@ -95,7 +109,7 @@ const articles = [
         council: '33-19 BBY'
     },
     {
-        id: 7,
+        id: 8,
         imgSrc: 'images/Saesse_Tinn.jpeg',
         imgAlt: 'Saesse Tinn',
         name: 'Saesse Tinn',
@@ -106,7 +120,7 @@ const articles = [
         council: '40-19 BBY'
     },
     {
-        id: 8,
+        id: 9,
         imgSrc: 'images/Yaddle.jpeg',
         imgAlt: 'Yaddle',
         name: 'Yaddle',
@@ -120,7 +134,7 @@ const articles = [
         council: '-32BBY'
     },
     {
-        id: 9,
+        id: 10,
         imgSrc: 'images/Even_Piell.jpeg',
         imgAlt: 'Even Piell',
         name: 'Even Piell',
@@ -131,7 +145,7 @@ const articles = [
         council: '33-20BBY, replaced by Coleman Kcaj'
     },
     {
-        id: 10,
+        id: 11,
         imgSrc: 'images/Oppo_Rancisis.JPG',
         imgAlt: 'Oppo Rancisis', 
         name: 'Oppo Rancisis',
@@ -143,7 +157,7 @@ const articles = [
         survivor: 'Order 66 Survivor'
     },
     {
-        id: 11,
+        id: 12,
         imgSrc: 'images/Ada_Gallia.jpeg',
         imgAlt: 'Ada Gallia',
         name: 'Ada Gallia',
@@ -156,7 +170,7 @@ const articles = [
         council: '32-19BBY, replaced by Stass Allie'
     },
     {
-        id: 12,
+        id: 13,
         imgSrc: 'images/Yarael_Poof.jpeg',
         imgAlt: 'Yarael Poof',
         name: 'Yarael Poof',
@@ -167,7 +181,7 @@ const articles = [
         council: '232-22BBY'
     },
     {
-        id: 13,
+        id: 14,
         imgSrc: 'images/Eeth_Koth.jpeg',
         imgAlt: 'Eeth Koth',
         name: 'Eeth Koth',
@@ -179,7 +193,7 @@ const articles = [
         survivor: 'Order 66 Survivor (19-14BBY)'
     },
     {
-        id: 14,
+        id: 15,
         imgSrc: 'images/Depa_Billaba.JPG',
         imgAlt: 'Depa Billaba',
         name: 'Depa Billaba',
@@ -192,7 +206,7 @@ const articles = [
         council: '40-21BBY'
     },
     {
-        id: 15,
+        id: 16,
         imgSrc: 'images/Kit_Fisto.jpeg',
         imgAlt: 'Kit Fisto',
         name: 'Kit Fisto',
@@ -205,7 +219,7 @@ const articles = [
         council: '22-19BBY, replaced Coleman Trebor'
     },
     {
-        id: 16,
+        id: 17,
         imgSrc: 'images/Shaak_Ti.jpeg',
         imgAlt: 'Shaak Ti',
         name: 'Shaak Ti',
@@ -217,7 +231,7 @@ const articles = [
         council: '32-19BBY, replaced Yaddle',
     },
     {
-        id: 17,
+        id: 18,
         imgSrc: 'images/Coleman_Trebor.jpeg',
         imgAlt: 'Coleman Trebor',
         name: 'Coleman Trebor',
@@ -228,7 +242,7 @@ const articles = [
         council: '23-22BBY, replaced Yarael Poof, replaced by Kit Fisto'
     },
     {
-        id: 18,
+        id: 19,
         imgSrc: 'images/Agen_Kolar.jpeg',
         imgAlt: 'Agen Kolar',
         name: 'Agen Kolar',
@@ -240,7 +254,7 @@ const articles = [
         council: '21-19BBY, replaced Eeth Koth'
     },
     {
-        id: 19,
+        id: 20,
         imgSrc: 'images/Stass_Allie.jpeg',
         imgAlt: 'Stass Allie',
         name: 'Stass Allie',
@@ -253,7 +267,7 @@ const articles = [
         council: '19BBY, replaced Ada Gallia'
     },
     {
-        id: 20,
+        id: 21,
         imgSrc: 'images/Coleman_Kcaj.JPG',
         imgAlt: 'Coleman Kcaj',
         name: 'Coleman Kcaj',
@@ -300,7 +314,7 @@ articles.forEach(item => {
                 <p>Lightsaber: ${item.lightsaber}</p>
                 ${item.midochlorians ? `<p>Midochlorians: ${item.midochlorians}</p>` : ''}
             </jedi>
-            <p>Council Member: ${item.council}<p>
+            ${item.council ? `<p>Council Member: ${item.council}<p>` : ''}
             ${item.survivor ? `<p>${item.survivor}</p>` : ''}
         </div>
     `;
