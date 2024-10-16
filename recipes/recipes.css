@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+:root {
+    --primary-color: #1b98e0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: "Amatic SC"
+}
+
+.title {
+    display: flex;
+}
+
+input {
+    width: 85%;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+h1, h2 {
+    font-family: var(--secondary-font);
+}
+
+h1 {
+    font-size: 4.5em;
+}
+
+h2 {
+    font-size: 3em;
+    color: var(--primary-color);
+
+}
+
+p, label, a{
+    font-family: var(--primary-font);
+    font-size: 1.5em;
+}
+
+button {
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    font-family: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+}
+
+.recipe-book {
+    width: 200px;
+}
