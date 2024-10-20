@@ -5,11 +5,21 @@
     --secondary-color: #eec584;
     --accent1-color: #0082ed;
     --text-light1: #b4daf8; 
+    --text-dark1: #0434ac;
     --accent2-color: #00d816;
     --text-light2: #bdffc3; 
+    --text-dark2: #058c42;
     --accent3-color: #a300d5;
     --text-light3: #f0c0ff;
+    --accent4-color: #bbbfcb;
     --text-light: white;
+    --text-dark4: #848790;
+    --accent5-color: #ffdd00;
+    --text-light5: #fffac8;
+    --accent6-color: #f24900;
+    --text-light6: #ffcfb1;
+    --accent7-color: #ff0000;
+    --text-light7: #ffbfbf;
     --font-primary: 'Roboto Condensed', sans-serif;
     --font-secondary: 'Titillium Web', sans-serif;
 }
@@ -118,6 +128,12 @@ main p {
     
 }
 
+.selectors {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
 .accordion {
     cursor: pointer;
     padding: 18px;
@@ -167,4 +183,24 @@ main p {
 .purple {
     background-color: var(--accent3-color);
     color: var(--text-light3);
+}
+
+.yellow {
+    background-color: var(--accent5-color);
+    color: var(--text-light5);
+}
+
+.orange {
+    background-color: var(--accent6-color);
+    color: var(--text-light6);
+}
+
+.white {
+    background-color: var(--accent4-color);
+    color: var(--text-light);
+}
+
+.red {
+    background-color: var(--accent7-color);
+    color: var(--text-light7);
 }

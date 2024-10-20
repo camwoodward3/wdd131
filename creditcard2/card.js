@@ -28,4 +28,5 @@ function submitHandler(event) {
 	return true
 }
 
-document.querySelector('#credit-card').addEventListener('submit', submitHandler)
+document.querySelector('#credit-card').addEventListener('submit', submitHandler);
+
