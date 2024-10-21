@@ -92,13 +92,15 @@ img {
 }
 
 #article-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 3em;
     justify-content: space-between;
 }  
 
-
+.article {
+    max-width: 400px;
+}
 
 h1 h2 h3 {
     font-size: var(--font-primary);
@@ -204,3 +206,4 @@ main p {
     background-color: var(--accent7-color);
     color: var(--text-light7);
 }
+

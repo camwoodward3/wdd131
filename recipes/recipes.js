@@ -1,4 +1,4 @@
-const recipes = [
+export const recipes = [
 	{
 		author: 'Provo High Culinary Students',
 		url: '',
@@ -279,17 +279,3 @@ const recipes = [
 		rating: 4
 	}
 ];
-console.log('there');
-
-function filter(query) {
-    const filtered = recipes.filter(filterFunction)
-	console.log(filtered)
-    const sorted = filtered.sort(sortFunction)
-        return sorted
-}
-
-function searchHandler(e) {
-    e.preventDefault();
-
-	recipes.name.toLowerCase().includes(query)
-}

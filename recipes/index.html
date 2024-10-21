@@ -11,8 +11,8 @@
     <meta property="twitter:card" content="summary_large_image">
     <title>Document</title>
     <link rel="stylesheet" href="recipes.css">
-    <script src="recipes.js" defer></script>
-    <script src="main.js" defer></script>
+    <!-- <script src="recipes.js" defer></script> -->
+    <script src="main.js" type="module"></script>
 </head>
 <body>
     <header class="title">
@@ -22,7 +22,7 @@
     <main>
         <div class="search">
             <input type="text" id="find-a-recipe" name="find-a-recipe" placeholder="Find a Recipe">
-            <img src="images/search.svg" alt="search icon">
+            <button id="search-button"><img src="images/search.svg" alt="search icon"></button>
         </div>
         <hr>
         <section id="recipeTemplate"></section>

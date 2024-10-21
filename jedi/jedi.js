@@ -912,7 +912,7 @@ const articles = [
     },
     {
         id: 70,
-        imgSrc: 'images/Gungi.jpg',
+        imgSrc: 'images/Gungi.jpeg',
         imgAlt: 'Gungi',
         name: 'Gungi',
         species: 'Wookie',
@@ -1468,7 +1468,8 @@ const articles = [
         parents: 'Han Solo, Leia Skywalker Organa',
         grandparents: 'Anakin Skywalker, Padme Amidala',
         uncleAunt: 'Luke Skywalker',
-        master: 'Luke Skywalker, Snoke, Darth Sidious',        lightsaber: 'blue',
+        master: 'Luke Skywalker, Snoke, Darth Sidious',        
+        lightsaber: 'blue',
         midochlorians: '16,000-18,000',
         newJediOrder: 'New Jedi Order',
         sith: 'Kylo Ren',
@@ -1499,7 +1500,7 @@ articles.forEach(item => {
     const newArticle = document.createElement('article');
     newArticle.classList.add('article');
     const articleTemplate = `
-        <div id="character">
+        <div id="character-${item.id}">
             <img src="${item.imgSrc}" alt="${item.imgAlt}">
             <button class="accordion ${item.lightsaber}">${item.name}</button>
             <div class="panel" style="display:none">
@@ -1566,3 +1567,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+function filterForAttributes(event) {
+    const selectedAttribute = event.target.value;
+    const currentJedi = document.querySelectorAll('article.article');
+    const currentJediArray = [...currentJedi];
+    function performFilter(singleJediArticle) {
+        const currentId = singleJediArticle.children[0].id.replace("character-","");
+        const currentJedi = articles[articles.filter(item => item == currentId)];
+        const currentJediTags = currentJedi.tags;
+        if (currentJediTags.includes(selectedAttribute))  {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+    const filterJedi = currentJediArray.filter(performFilter);
+    document.querySelector('#article-container').innerHTML = filterJedi.join("");
+
+}
+
+
+
+let tagSelector = document.getElementById('attribute-tags');
+
+tagSelector.addEventListener('change', filterForAttributes);

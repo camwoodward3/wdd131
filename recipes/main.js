@@ -1,4 +1,4 @@
-console.log(recipes,"here");
+import {recipes} from "./recipes.js";
 
 function random(num) {
     return Math.floor(Math.random() * num);
@@ -9,7 +9,6 @@ function getRandomListEntry(list) {
     const randomNum = random(listLength);
     return list[randomNum];
 }
-
 
 
 let template = document.getElementById("recipeTemplate");
@@ -51,6 +50,38 @@ function tagsTemplate(tags) {
     });
     return stringBuilder;
 }
+function renderRecipes(recipeList) {
+    let template = document.getElementById("recipeTemplate");
+    const html = recipeList.map(recipeTemplate);
+    template.innerHTML = html.join("");
+}
+
+
+
+function filter(query) {
+    function filterFunction(recipe) {
+        return (
+        recipe.name.toLowerCase().includes(query.toLowerCase()) ||
+        recipe.tags.find((tag) => tag.toLowerCase().includes(query.toLowerCase()))
+        );
+    }
+    const filtered = recipes.filter(filterFunction)
+	console.log(filtered)
+    // const sorted = filtered.sort(sortFunction)
+    return filtered
+}
+
+
+function searchHandler(e) {
+    e.preventDefault();
+	const searchElement = document.querySelector("#find-a-recipe");
+	const query = searchElement.value.toLowerCase();
+	const filtered = filter(query);
+    renderRecipes(filtered);
+}
+
+document.querySelector("#search-button").addEventListener('click', searchHandler);
+
 
  
 
