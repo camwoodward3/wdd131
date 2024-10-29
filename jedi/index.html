@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="description" content="Cameron Woodward">
     <link rel="stylesheet" href="styles.css">
-    <script src="jedi.js" defer></script>
+    <script src="jedi.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -29,21 +29,75 @@
             <div class="Jedi">
                 <label for="events">Jedi:</label>
                 <select id="attribute-tags" name="event">
-                    <option value="All">All</option>
-                    <option value="Jedi High Council Member">Jedi High Council Member</option>
+                    <option value="All"></option>
+                    <option value="Jedi High Council">Jedi High Council Members</option>
+                    <option value="Sith">Sith</option>
+                    <option value="Old Republic">Old Republic</option>
+                    <option value="Mandalorian Wars">Mandalorian Wars</option>
+                    <option value="Jedi Civil War">Jedi Civil War</option>
+                    <option value="Lost Jedi">Lost Jedi</option>
+                    <option value="High Republic">High Republic</option>
                     <option value="Genosis Strike Team">Genosis Strike Team</option>
                     <option value="Clone Wars">Clone Wars</option>
-                    <option value="Victims of Order 66">Victims of Order 66</option>
+                    <option value="Victim of Order 66">Victims of Order 66</option>
                     <option value="Order 66 Survivors">Order 66 Survivors</option>
                     <option value="Rebel Alliance">Rebel Alliance</option>
                     <option value="New Jedi Order">New Jedi Order</option>
                     <option value="The Resistance">The Resistance</option>
                 </select>
             </div>
+            <div class="species">
+                <label for="species">Species:</label>
+                <select id="species-tags" name="species">
+                    <option value="All"></option>
+                    <option value="Anx">Anx</option>
+                    <option value="Arkanian Offshoot">Arkanian Offshoot</option>
+                    <option value="Besalisk">Besalisk</option>
+                    <option value="Caphex">Caphex</option>
+                    <option value="Cathar">Cathar</option>
+                    <option value="Cerean">Cerean</option>
+                    <option value="Chalactan">Chalactan</option>
+                    <option value="Cosian">Cosian</option>
+                    <option value="Dowutin">Dowutin</option>
+                    <option value="Halaisi">Halaisi</option>
+                    <option value="Human">Human</option>
+                    <option value="Human-Echani Hybrid">Human-Echani Hybrid</option>
+                    <option value="Iktotchi">Iktotchi</option>
+                    <option value="Ithorian">Ithorian</option>
+                    <option value="Kel Dor">Kel Dor</option>
+                    <option value="Kiffar">Kiffar</option>
+                    <option value="Klatooinian">Klatooinian</option>
+                    <option value="Lannik">Lannik</option>
+                    <option value="Lasat">Lasat</option>
+                    <option value="Mikkian">Mikkian</option>
+                    <option value="Miraluka">Miraluka</option>
+                    <option value="Mirialan">Mirialan</option>
+                    <option value="Mon Calamari">Mon Calamari</option>
+                    <option value="Nautolan">Nautolan</option>
+                    <option value="Nikito">Nikito</option>
+                    <option value="Ongree">Ongree</option>
+                    <option value="Pau'an">Pau'an</option>
+                    <option value="Quermian">Quermian</option>
+                    <option value="Rodian">Rodian</option>
+                    <option value="Skrilling">Skrilling</option>
+                    <option value="Terrelian Jango Jumper">Terrelian Jango Jumper</option>
+                    <option value="Theelin-Human Hybrid">Theelin-Human Hybrid</option>
+                    <option value="Thisspiasian">Thisspiasian</option>
+                    <option value="Tholothian">Tholothian</option>
+                    <option value="Togruta">Togruta</option>
+                    <option value="Twi'lek">Twi'lek</option>
+                    <option value="Vurk">Vurk</option>
+                    <option value="Weequay">Weequay</option>
+                    <option value="Wookie">Wookie</option>
+                    <option value="Yoda Species">Yoda Species</option>
+                    <option value="Zabrak">Zabrak</option>
+                    <option value="Zygerrian">Zygerrian</option>
+                </select>
+            </div>
             <div class="ranks">
                 <label for="ranks">Jedi ranks:</label>
-                <select id="rank-tag" name="rank">
-                    <option value="All">All</option>
+                <select id="rank-tags" name="rank">
+                    <option value="All"></option>
                     <option value="Youngling">Youngling</option>
                     <option value="Padawan">Padawan</option>
                     <option value="Jedi Knight">Jedi Knight</option>
@@ -53,8 +107,8 @@
             </div>
             <div class="colors">
                 <label for="lightsaber-colors">Lightsaber colors:</label>
-                <select id="color-tag" name="color">
-                    <option value="All">All</option>
+                <select id="color-tags" name="color">
+                    <option value="All"></option>
                     <option value="Blue">Blue</option>
                     <option value="Green">Green</option>
                     <option value="Yellow">Yellow</option>
