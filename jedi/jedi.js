@@ -1,7 +1,20 @@
 import { articles } from "./jediList.js";
 
 function convertHTML(item) {
-  return `<div id="character-${item.id}">
+  return `
+        <div>
+          <section class="modal-content">
+          <span class="close-button" aria-label="Close modal">&times;</span>
+          ${item.imgSrc2 ? `<img src="${item.imgSrc2}" alt="${item.imgAlt2}">` : ""}
+          <h2>${item.name}</h2>
+          <p>${item.info}</p>
+          ${item.survivor ? `<h2>Order 66</h2>` : ""}
+          ${item.survivor_info ? `<p>${item.survivor_info}</p>` : ""}
+          ${item.death ? `<h2>Death</h2>` : ""}
+          ${item.death_info ? `<p>${item.death_info}</p>` : ""}
+          </section>
+          </div>
+          <div id="character">
             <img src="${item.imgSrc}" alt="${item.imgAlt}">
             <button class="accordion ${item.lightsaber}">${item.name}</button>
             <div class="panel" style="display:none">
@@ -60,7 +73,6 @@ function convertHTML(item) {
                     }
                 </jedi>
                 <hr>
-
                 ${item.council ? `<p>Council Member: ${item.council}<p>` : ""}
                 ${item.war ? `<p>${item.war}</p>` : ""}
                 ${item.survivor ? `<p>${item.survivor}</p>` : ""}
@@ -69,13 +81,15 @@ function convertHTML(item) {
                 ${item.republic ? `<p>${item.republic}</p>` : ""}
                 ${item.newJediOrder ? `<p>${item.newJediOrder}</p>` : ""}
                 ${item.resistance ? `<p>${item.resistance}</p>` : ""}
-                ${item.mandalorian ? `<p>${item.mandalorian}</p>` : ""}
+                ${item.mandalorians ? `<p>${item.mandalorians}</p>` : ""}
                 ${item.civil_war ? `<p>${item.civil_war}</p>` : ""}
                 ${item.lost ?  `<p>${item.lost}</p>` : ""}
+                ${item.cold ? `<p>${item.cold}</p>` : ""}
                 <hr>
                 <h3>Appearances</h3>
                 ${item.kotor ? `<p>${item.kotor}</p>` : ""}
                 ${item.kotorII ? `<p>${item.kotorII}</p>` : ""}
+                ${item.swtor ? `<p>${item.swtor}</p>` : ""}
                 ${item.ta ? `<p>${item.ta}</p>` : ""}
                 ${item.tpm ? `<p>${item.tpm}</p>` : ""}
                 ${item.aotc ? `<p>${item.aotc}</p>` : ""}
